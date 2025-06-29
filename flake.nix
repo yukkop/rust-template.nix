@@ -29,6 +29,11 @@
       devShells.${system} = {
 	default = import ./devshell/default.nix { inherit pkgs; };
       };
+    } // {
+      templates.default = {
+          path = ./.;
+          description = "rust dev flake template";
+      };
     }
   );
 }
